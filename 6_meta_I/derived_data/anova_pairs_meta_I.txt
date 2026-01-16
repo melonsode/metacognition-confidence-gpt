@@ -1,0 +1,61 @@
+Anova Table (Type 3 tests)
+
+Response: meta_I
+      Effect           df  MSE         F  ges p.value
+1      Agent       1, 172 0.02 55.68 *** .135   <.001
+2       Cond 1.76, 301.89 0.02 85.09 *** .204   <.001
+3 Agent:Cond 1.76, 301.89 0.02 18.11 *** .052   <.001
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+wrote 1.00TB in  0s, 123.36PB/s                                                                                       
+
+## 多重比較 --- 
+#Cond（within）の主効果
+ contrast  estimate      SE  df t.ratio p.value
+ X2C - X4C   0.0238 0.00991 172   2.400  0.0524
+ X2C - OP   -0.1259 0.01390 172  -9.031  <.0001
+ X4C - OP   -0.1497 0.01280 172 -11.697  <.0001
+
+Results are averaged over the levels of: Agent 
+P value adjustment: bonferroni method for 3 tests 
+p-value:  0.05238593 1.013465e-15 3.772008e-23 
+
+#Agent（between）
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)    0.103 0.0138 172   7.462  <.0001
+
+Results are averaged over the levels of: Cond 
+p-value:  4.046803e-12 
+
+#交互作用が有意なら（Agent 別に Cond））
+Agent = Humans:
+ contrast  estimate     SE  df t.ratio p.value
+ X2C - X4C  -0.0469 0.0140 172  -3.347  0.0030
+ X2C - OP   -0.1809 0.0197 172  -9.175  <.0001
+ X4C - OP   -0.1340 0.0181 172  -7.404  <.0001
+
+Agent = GPT-4:
+ contrast  estimate     SE  df t.ratio p.value
+ X2C - X4C   0.0945 0.0140 172   6.742  <.0001
+ X2C - OP   -0.0709 0.0197 172  -3.598  0.0013
+ X4C - OP   -0.1654 0.0181 172  -9.137  <.0001
+
+P value adjustment: bonferroni method for 3 tests 
+p-value:  0.003005244 4.160399e-16 1.690699e-11 6.827319e-10 0.001258713 5.249499e-16 
+
+# Cond 別に Agent
+Cond = X2C:
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)   0.0189 0.0173 172   1.097  0.2742
+
+Cond = X4C:
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)   0.1603 0.0151 172  10.638  <.0001
+
+Cond = OP:
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)   0.1289 0.0255 172   5.048  <.0001
+
+p-value:  0.274211 1.252038e-20 1.128338e-06 
