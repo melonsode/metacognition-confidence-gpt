@@ -1,0 +1,69 @@
+[1] "## s mean"
+[1] "# HumanとGPTでcorrect_rateとconfidenceの傾きが有意に異なる"
+
+Call:
+lm(formula = Mean_conf ~ Mean_CR * Agent, data = merged_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-20.203  -6.130   2.667   3.789  34.819 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        27.554      3.054   9.022 4.61e-15 ***
+Mean_CR            58.367      4.327  13.489  < 2e-16 ***
+AgentGPT           61.841      4.314  14.334  < 2e-16 ***
+Mean_CR:AgentGPT  -51.552      5.487  -9.395 6.22e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.405 on 116 degrees of freedom
+Multiple R-squared:  0.8246,	Adjusted R-squared:   0.82 
+F-statistic: 181.8 on 3 and 116 DF,  p-value: < 2.2e-16
+
+     (Intercept)          Mean_CR         AgentGPT Mean_CR:AgentGPT 
+    4.613560e-15     1.623917e-25     1.945544e-27     6.217748e-16 
+[1] "# Humanでcorrect_rateとconfidenceの傾きが有意に0と異なる"
+
+Call:
+lm(formula = Mean_conf ~ Mean_CR, data = human_average)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-20.203  -6.629   1.343   6.596  34.819 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   27.554      3.650    7.55 3.49e-10 ***
+Mean_CR       58.367      5.171   11.29 2.88e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 10.04 on 58 degrees of freedom
+Multiple R-squared:  0.6872,	Adjusted R-squared:  0.6818 
+F-statistic: 127.4 on 1 and 58 DF,  p-value: 2.884e-16
+
+ (Intercept)      Mean_CR 
+3.491317e-10 2.884021e-16 
+[1] "# GPTでcorrect_rateとconfidenceの傾きが有意に0と異なる"
+
+Call:
+lm(formula = Mean_conf ~ Mean_CR, data = gpt_average)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-15.091  -1.870   3.637   3.789  10.604 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   89.396      2.304  38.793   <2e-16 ***
+Mean_CR        6.816      2.552   2.671   0.0098 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.356 on 58 degrees of freedom
+Multiple R-squared:  0.1095,	Adjusted R-squared:  0.09417 
+F-statistic: 7.134 on 1 and 58 DF,  p-value: 0.009801
+
+ (Intercept)      Mean_CR 
+3.480691e-43 9.801495e-03 

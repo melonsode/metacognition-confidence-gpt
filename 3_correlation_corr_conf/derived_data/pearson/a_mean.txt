@@ -1,0 +1,33 @@
+[1] "## a mean"
+[1] "#Human"
+
+	Pearson's product-moment correlation
+
+data:  cr and cf
+t = 10.091, df = 259, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.4380781 0.6131129
+sample estimates:
+      cor 
+0.5312406 
+
+[1] "p.value --- "
+[1] 2.07296e-20
+[1] "- - - - - -"
+[1] "#GPT"
+
+	Pearson's product-moment correlation
+
+data:  cr and cf
+t = 11.379, df = 259, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.4902863 0.6529828
+sample estimates:
+      cor 
+0.5773371 
+
+[1] "p.value --- "
+[1] 1.341659e-24
+[1] "- - - - - -"
