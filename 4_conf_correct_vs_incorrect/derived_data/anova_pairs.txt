@@ -1,0 +1,170 @@
+Anova Table (Type 3 tests)
+
+Response: meta_I
+      Effect           df  MSE         F  ges p.value
+1      Agent       1, 172 0.02 55.68 *** .135   <.001
+2       Cond 1.76, 301.89 0.02 85.09 *** .204   <.001
+3 Agent:Cond 1.76, 301.89 0.02 18.11 *** .052   <.001
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+wrote 1.00TB in  0s, 167.77PB/s                                                                                       
+
+## 多重比較 --- 
+# A) 全セル（Agent×Cond×Correctness）間の比較
+ contrast                                      estimate    SE  df t.ratio p.value
+ Humans X2C Correct - (GPT-4 X2C Correct)       -18.933 1.470 169 -12.897  <.0001
+ Humans X2C Correct - Humans X4C Correct          0.433 0.644 169   0.673  1.0000
+ Humans X2C Correct - (GPT-4 X4C Correct)       -19.391 1.520 169 -12.763  <.0001
+ Humans X2C Correct - Humans OP Correct           3.395 0.864 169   3.931  0.0081
+ Humans X2C Correct - (GPT-4 OP Correct)        -18.902 1.520 169 -12.469  <.0001
+ Humans X2C Correct - Humans X2C Incorrect       19.764 1.280 169  15.471  <.0001
+ Humans X2C Correct - (GPT-4 X2C Incorrect)     -13.595 1.880 169  -7.216  <.0001
+ Humans X2C Correct - Humans X4C Incorrect       26.056 1.410 169  18.452  <.0001
+ Humans X2C Correct - (GPT-4 X4C Incorrect)     -22.283 1.880 169 -11.861  <.0001
+ Humans X2C Correct - Humans OP Incorrect        41.707 1.440 169  28.943  <.0001
+ Humans X2C Correct - (GPT-4 OP Incorrect)       -7.606 1.820 169  -4.176  0.0031
+ (GPT-4 X2C Correct) - Humans X4C Correct        19.366 1.520 169  12.732  <.0001
+ (GPT-4 X2C Correct) - (GPT-4 X4C Correct)       -0.458 0.633 169  -0.725  1.0000
+ (GPT-4 X2C Correct) - Humans OP Correct         22.328 1.520 169  14.713  <.0001
+ (GPT-4 X2C Correct) - (GPT-4 OP Correct)         0.031 0.849 169   0.036  1.0000
+ (GPT-4 X2C Correct) - Humans X2C Incorrect      38.697 1.900 169  20.398  <.0001
+ (GPT-4 X2C Correct) - (GPT-4 X2C Incorrect)      5.337 1.260 169   4.252  0.0023
+ (GPT-4 X2C Correct) - Humans X4C Incorrect      44.989 1.890 169  23.782  <.0001
+ (GPT-4 X2C Correct) - (GPT-4 X4C Incorrect)     -3.351 1.390 169  -2.415  1.0000
+ (GPT-4 X2C Correct) - Humans OP Incorrect       60.640 1.830 169  33.084  <.0001
+ (GPT-4 X2C Correct) - (GPT-4 OP Incorrect)      11.326 1.420 169   7.999  <.0001
+ Humans X4C Correct - (GPT-4 X4C Correct)       -19.824 1.570 169 -12.621  <.0001
+ Humans X4C Correct - Humans OP Correct           2.962 0.970 169   3.054  0.1733
+ Humans X4C Correct - (GPT-4 OP Correct)        -19.335 1.570 169 -12.336  <.0001
+ Humans X4C Correct - Humans X2C Incorrect       19.331 1.320 169  14.693  <.0001
+ Humans X4C Correct - (GPT-4 X2C Incorrect)     -14.029 1.930 169  -7.285  <.0001
+ Humans X4C Correct - Humans X4C Incorrect       25.623 1.310 169  19.566  <.0001
+ Humans X4C Correct - (GPT-4 X4C Incorrect)     -22.716 1.920 169 -11.829  <.0001
+ Humans X4C Correct - Humans OP Incorrect        41.274 1.570 169  26.305  <.0001
+ Humans X4C Correct - (GPT-4 OP Incorrect)       -8.039 1.860 169  -4.312  0.0018
+ (GPT-4 X4C Correct) - Humans OP Correct         22.786 1.570 169  14.539  <.0001
+ (GPT-4 X4C Correct) - (GPT-4 OP Correct)         0.489 0.953 169   0.514  1.0000
+ (GPT-4 X4C Correct) - Humans X2C Incorrect      39.155 1.940 169  20.213  <.0001
+ (GPT-4 X4C Correct) - (GPT-4 X2C Incorrect)      5.796 1.290 169   4.483  0.0009
+ (GPT-4 X4C Correct) - Humans X4C Incorrect      45.447 1.930 169  23.526  <.0001
+ (GPT-4 X4C Correct) - (GPT-4 X4C Incorrect)     -2.892 1.290 169  -2.248  1.0000
+ (GPT-4 X4C Correct) - Humans OP Incorrect       61.098 1.870 169  32.599  <.0001
+ (GPT-4 X4C Correct) - (GPT-4 OP Incorrect)      11.785 1.540 169   7.644  <.0001
+ Humans OP Correct - (GPT-4 OP Correct)         -22.297 1.560 169 -14.257  <.0001
+ Humans OP Correct - Humans X2C Incorrect        16.369 1.610 169  10.176  <.0001
+ Humans OP Correct - (GPT-4 X2C Incorrect)      -16.990 1.920 169  -8.836  <.0001
+ Humans OP Correct - Humans X4C Incorrect        22.661 1.710 169  13.245  <.0001
+ Humans OP Correct - (GPT-4 X4C Incorrect)      -25.678 1.920 169 -13.391  <.0001
+ Humans OP Correct - Humans OP Incorrect         38.312 1.480 169  25.966  <.0001
+ Humans OP Correct - (GPT-4 OP Incorrect)       -11.001 1.860 169  -5.909  <.0001
+ (GPT-4 OP Correct) - Humans X2C Incorrect       38.666 1.930 169  19.988  <.0001
+ (GPT-4 OP Correct) - (GPT-4 X2C Incorrect)       5.306 1.580 169   3.357  0.0643
+ (GPT-4 OP Correct) - Humans X4C Incorrect       44.958 1.930 169  23.305  <.0001
+ (GPT-4 OP Correct) - (GPT-4 X4C Incorrect)      -3.382 1.680 169  -2.012  1.0000
+ (GPT-4 OP Correct) - Humans OP Incorrect        60.609 1.870 169  32.386  <.0001
+ (GPT-4 OP Correct) - (GPT-4 OP Incorrect)       11.295 1.450 169   7.791  <.0001
+ Humans X2C Incorrect - (GPT-4 X2C Incorrect)   -33.360 2.230 169 -14.929  <.0001
+ Humans X2C Incorrect - Humans X4C Incorrect      6.292 1.300 169   4.829  0.0002
+ Humans X2C Incorrect - (GPT-4 X4C Incorrect)   -42.047 2.230 169 -18.854  <.0001
+ Humans X2C Incorrect - Humans OP Incorrect      21.943 1.790 169  12.245  <.0001
+ Humans X2C Incorrect - (GPT-4 OP Incorrect)    -27.370 2.180 169 -12.542  <.0001
+ (GPT-4 X2C Incorrect) - Humans X4C Incorrect    39.651 2.230 169  17.781  <.0001
+ (GPT-4 X2C Incorrect) - (GPT-4 X4C Incorrect)   -8.688 1.280 169  -6.785  <.0001
+ (GPT-4 X2C Incorrect) - Humans OP Incorrect     55.303 2.180 169  25.364  <.0001
+ (GPT-4 X2C Incorrect) - (GPT-4 OP Incorrect)     5.989 1.760 169   3.401  0.0552
+ Humans X4C Incorrect - (GPT-4 X4C Incorrect)   -48.339 2.230 169 -21.720  <.0001
+ Humans X4C Incorrect - Humans OP Incorrect      15.651 1.680 169   9.295  <.0001
+ Humans X4C Incorrect - (GPT-4 OP Incorrect)    -33.662 2.180 169 -15.459  <.0001
+ (GPT-4 X4C Incorrect) - Humans OP Incorrect     63.990 2.180 169  29.410  <.0001
+ (GPT-4 X4C Incorrect) - (GPT-4 OP Incorrect)    14.677 1.650 169   8.871  <.0001
+ Humans OP Incorrect - (GPT-4 OP Incorrect)     -49.313 2.130 169 -23.188  <.0001
+
+P value adjustment: bonferroni method for 66 tests 
+p-value:  4.065622e-25 1 9.768227e-25 0.008118552 6.668826e-24 2.210634e-32 1.136114e-09 1.576886e-40 3.53445e-22 1.435417e-65 0.003134084 1.202112e-24 1 2.946974e-30 1 1.281712e-45 0.002310698 5.466526e-54 1 6.441053e-74 1.25273e-11 2.470627e-24 0.1732884 1.595447e-23 3.355994e-30 7.717281e-10 1.812019e-43 4.373343e-22 8.03609e-60 0.001813904 9.120282e-30 1 3.818831e-45 0.0008929841 2.238716e-53 1 5.598768e-73 9.969202e-11 5.693531e-29 1.88328e-17 8.197422e-14 4.182044e-26 1.619476e-26 4.661313e-59 1.218728e-06 1.45227e-44 0.0642683 7.580266e-53 1 1.455551e-72 4.242366e-11 7.315554e-31 0.00020204 1.348488e-41 2.886668e-23 4.144182e-24 9.938882e-39 1.233521e-08 1.097584e-57 0.05522187 5.781418e-49 4.823299e-15 2.390244e-32 1.497757e-66 6.623959e-14 1.449914e-52 
+
+
+# B) Agent差を Cond×Correctness ごとに（Humans vs GPT-4 を各セルで）
+Cond = X2C, Correctness = Correct:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -18.9 1.47 169 -12.897  <.0001
+
+Cond = X4C, Correctness = Correct:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -19.8 1.57 169 -12.621  <.0001
+
+Cond = OP, Correctness = Correct:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -22.3 1.56 169 -14.257  <.0001
+
+Cond = X2C, Correctness = Incorrect:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -33.4 2.23 169 -14.929  <.0001
+
+Cond = X4C, Correctness = Incorrect:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -48.3 2.23 169 -21.720  <.0001
+
+Cond = OP, Correctness = Incorrect:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -49.3 2.13 169 -23.188  <.0001
+
+p-value:  6.160034e-27 3.743375e-26 8.626562e-31 1.108417e-32 8.759724e-51 2.196839e-54 
+
+
+# C) Cond差を Agent×Correctness ごとに（条件差を各グループで）
+Agent = Humans, Correctness = Correct:
+ contrast  estimate    SE  df t.ratio p.value
+ X2C - X4C    0.433 0.644 169   0.673  1.0000
+ X2C - OP     3.395 0.864 169   3.931  0.0004
+ X4C - OP     2.962 0.970 169   3.054  0.0079
+
+Agent = GPT-4, Correctness = Correct:
+ contrast  estimate    SE  df t.ratio p.value
+ X2C - X4C   -0.458 0.633 169  -0.725  1.0000
+ X2C - OP     0.031 0.849 169   0.036  1.0000
+ X4C - OP     0.489 0.953 169   0.514  1.0000
+
+Agent = Humans, Correctness = Incorrect:
+ contrast  estimate    SE  df t.ratio p.value
+ X2C - X4C    6.292 1.300 169   4.829  <.0001
+ X2C - OP    21.943 1.790 169  12.245  <.0001
+ X4C - OP    15.651 1.680 169   9.295  <.0001
+
+Agent = GPT-4, Correctness = Incorrect:
+ contrast  estimate    SE  df t.ratio p.value
+ X2C - X4C   -8.688 1.280 169  -6.785  <.0001
+ X2C - OP     5.989 1.760 169   3.401  0.0025
+ X4C - OP    14.677 1.650 169   8.871  <.0001
+
+P value adjustment: bonferroni method for 3 tests 
+p-value:  1 0.0003690251 0.007876746 1 1 1 9.183637e-06 1.312122e-24 2.192408e-16 5.606912e-10 0.002510085 3.010891e-15 
+
+
+# D) Correctness差を Agent×Cond ごとに（Correct vs Incorrect）
+Agent = Humans, Cond = X2C:
+ contrast            estimate   SE  df t.ratio p.value
+ Correct - Incorrect    19.76 1.28 169  15.471  <.0001
+
+Agent = GPT-4, Cond = X2C:
+ contrast            estimate   SE  df t.ratio p.value
+ Correct - Incorrect     5.34 1.26 169   4.252  <.0001
+
+Agent = Humans, Cond = X4C:
+ contrast            estimate   SE  df t.ratio p.value
+ Correct - Incorrect    25.62 1.31 169  19.566  <.0001
+
+Agent = GPT-4, Cond = X4C:
+ contrast            estimate   SE  df t.ratio p.value
+ Correct - Incorrect    -2.89 1.29 169  -2.248  0.0259
+
+Agent = Humans, Cond = OP:
+ contrast            estimate   SE  df t.ratio p.value
+ Correct - Incorrect    38.31 1.48 169  25.966  <.0001
+
+Agent = GPT-4, Cond = OP:
+ contrast            estimate   SE  df t.ratio p.value
+ Correct - Incorrect    11.30 1.45 169   7.791  <.0001
+
+p-value:  3.349445e-34 3.501058e-05 2.745484e-45 0.02588989 7.062595e-61 6.427828e-13 
