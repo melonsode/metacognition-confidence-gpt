@@ -1,0 +1,64 @@
+Anova Table (Type 3 tests)
+
+Response: AUC
+      Effect           df  MSE          F  ges p.value
+1      Agent       1, 165 0.02  93.73 *** .210   <.001
+2       Cond 1.84, 303.76 0.01 179.85 *** .367   <.001
+3 Agent:Cond 1.84, 303.76 0.01 161.07 *** .342   <.001
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+[1] "p.value - - - - "
+[1] 7.776220e-18 1.595450e-49 7.919716e-46
+[1] " - - - - "
+wrote 1.00TB in  0s, 199.73PB/s                                                                                       
+
+## 多重比較 --- 
+#Cond（within）の主効果
+ contrast  estimate      SE  df t.ratio p.value
+ X2C - X4C   0.1375 0.01190 165  11.527  <.0001
+ X2C - OP   -0.0788 0.01270 165  -6.197  <.0001
+ X4C - OP   -0.2163 0.00979 165 -22.104  <.0001
+
+Results are averaged over the levels of: Agent 
+P value adjustment: bonferroni method for 3 tests 
+p-value:  1.888791e-22 1.329185e-08 1.025324e-50 
+
+#Agent（between）
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)    0.121 0.0125 165   9.682  <.0001
+
+Results are averaged over the levels of: Cond 
+p-value:  7.77622e-18 
+
+#交互作用が有意なら（Agent 別に Cond））
+Agent = Humans:
+ contrast  estimate     SE  df t.ratio p.value
+ X2C - X4C  -0.0548 0.0172 165  -3.183  0.0052
+ X2C - OP   -0.1081 0.0184 165  -5.888  <.0001
+ X4C - OP   -0.0533 0.0141 165  -3.775  0.0007
+
+Agent = GPT-4:
+ contrast  estimate     SE  df t.ratio p.value
+ X2C - X4C   0.3298 0.0165 165  19.974  <.0001
+ X2C - OP   -0.0495 0.0176 165  -2.813  0.0165
+ X4C - OP   -0.3793 0.0135 165 -28.001  <.0001
+
+P value adjustment: bonferroni method for 3 tests 
+p-value:  0.005226188 6.375804e-08 0.0006699005 2.031725e-45 0.01649417 4.237626e-64 
+
+# Cond 別に Agent
+Cond = X2C:
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)  -0.0265 0.0216 165  -1.227  0.2217
+
+Cond = X4C:
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)   0.3581 0.0159 165  22.560  <.0001
+
+Cond = OP:
+ contrast         estimate     SE  df t.ratio p.value
+ Humans - (GPT-4)   0.0320 0.0168 165   1.904  0.0586
+
+p-value:  0.2217095 2.710323e-52 0.05860243 
