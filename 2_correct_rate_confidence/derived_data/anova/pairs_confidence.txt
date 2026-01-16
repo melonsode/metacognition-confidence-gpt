@@ -1,0 +1,65 @@
+Anova Table (Type 3 tests)
+
+Response: Mean_conf
+      Effect           df    MSE          F  ges p.value
+1      Agent       1, 172 295.20 373.94 *** .641   <.001
+2       Cond 1.58, 272.50  40.78 146.63 *** .133   <.001
+3 Agent:Cond 1.58, 272.50  40.78  78.73 *** .076   <.001
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+        Term   num Df   den Df       MSE         F        ges       Pr(>F)
+1      Agent 1.000000 172.0000 295.19671 373.93732 0.64075774 5.317936e-45
+2       Cond 1.584329 272.5045  40.78391 146.62880 0.13276571 1.184794e-37
+3 Agent:Cond 1.584329 272.5045  40.78391  78.73438 0.07596007 1.938300e-23
+wrote 1.00TB in  0s, 13.32PB/s                                                                                       
+
+## 多重比較 --- 
+#Cond（within）の主効果
+ contrast  estimate    SE  df t.ratio p.value
+ X2C - X4C   0.0813 0.443 172   0.183  1.0000
+ X2C - OP    9.0779 0.628 172  14.463  <.0001
+ X4C - OP    8.9966 0.724 172  12.433  <.0001
+
+Results are averaged over the levels of: Agent 
+P value adjustment: bonferroni method for 3 tests 
+p-value:  1 4.650028e-31 2.971274e-25 
+
+#Agent（between）
+ contrast         estimate  SE  df t.ratio p.value
+ Humans - (GPT-4)    -29.1 1.5 172 -19.337  <.0001
+
+Results are averaged over the levels of: Cond 
+p-value:  5.317936e-45 
+
+#交互作用が有意なら（Agent 別に Cond））
+Agent = Humans:
+ contrast  estimate    SE  df t.ratio p.value
+ X2C - X4C     1.60 0.627 172   2.551  0.0348
+ X2C - OP     16.33 0.888 172  18.394  <.0001
+ X4C - OP     14.73 1.020 172  14.392  <.0001
+
+Agent = GPT-4:
+ contrast  estimate    SE  df t.ratio p.value
+ X2C - X4C    -1.44 0.627 172  -2.292  0.0694
+ X2C - OP      1.83 0.888 172   2.060  0.1228
+ X4C - OP      3.26 1.020 172   3.190  0.0051
+
+P value adjustment: bonferroni method for 3 tests 
+p-value:  0.03479758 5.342836e-42 7.390197e-31 0.06935671 0.1228448 0.005064976 
+
+# Cond 別に Agent
+Cond = X2C:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -23.2 1.57 172 -14.807  <.0001
+
+Cond = X4C:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -26.3 1.66 172 -15.855  <.0001
+
+Cond = OP:
+ contrast         estimate   SE  df t.ratio p.value
+ Humans - (GPT-4)    -37.7 1.75 172 -21.566  <.0001
+
+p-value:  1.634029e-32 1.78728e-35 8.785096e-51 
